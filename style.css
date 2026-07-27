@@ -48,12 +48,16 @@ body, html {
 }
 
 .main-logo {
-    /* --- INI BAGIAN YANG DIUBAH --- */
-    max-width: 700px; /* Ukuran batas maksimal yang megah */
-    width: 90%;       /* Agar logo besar dan responsif */
+    /* Hapus max-width agar tidak membatasi ukuran */
+    max-width: none; 
+    
+    /* UBAH DI SINI: Paksa lebar logo jadi jauh lebih besar dari layar.
+       Contoh: 150vw (150% dari lebar layar). 
+       Sesuaikan angkanya (misal 120vw atau 180vw) sampai ukurannya pas di mata kamu. */
+    width: 150vw; 
+
     height: auto;
-    opacity: 1;       /* Memastikan logo terang dan jelas */
-    /* ----------------------------- */
+    opacity: 1; /* Tetap pastikan terang */
 }
 
 /* Bagian Konten Di Bawah */
