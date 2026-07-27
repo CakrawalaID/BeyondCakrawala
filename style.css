@@ -48,16 +48,23 @@ body, html {
 }
 
 .main-logo {
-    /* Hapus max-width agar tidak membatasi ukuran */
-    max-width: none; 
+    /* --- INI PERBAIKANNYA --- */
     
-    /* UBAH DI SINI: Paksa lebar logo jadi jauh lebih besar dari layar.
-       Contoh: 150vw (150% dari lebar layar). 
-       Sesuaikan angkanya (misal 120vw atau 180vw) sampai ukurannya pas di mata kamu. */
-    width: 150vw; 
+    /* 1. Aktifkan kembali max-width. Beri nilai sekitar 700px sampai 800px. 
+       Ini batas maksimal di layar PC agar tidak menutupi layar. */
+    max-width: 800px; 
 
-    height: auto;
-    opacity: 1; /* Tetap pastikan terang */
+    /* 2. Gunakan width: 90% atau 95%. 
+       Ini memastikan di layar HP, logo akan besar tapi tidak mentok pinggir. */
+    width: 90%; 
+
+    /* 3. Wajib ada ini agar gambar proporsional. */
+    height: auto; 
+
+    /* 4. Pastikan opacity 1 agar terang. */
+    opacity: 1; 
+    
+    /* ------------------------ */
 }
 
 /* Bagian Konten Di Bawah */
