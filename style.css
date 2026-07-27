@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #111;
+    background-color: #0d0d0d;
     color: white;
     overflow-x: hidden;
 }
@@ -39,7 +39,7 @@ body, html {
     display: flex;
     gap: 25px;
     align-items: center;
-    margin-left: auto; /* Memaksa menu berada di paling kanan */
+    margin-left: auto;
 }
 
 .nav-menu a {
@@ -120,11 +120,11 @@ body, html {
     opacity: 1; 
 }
 
-/* Bagian Konten Di Bawah */
+/* Bagian Konten Di Bawah (WARNA SUDAH DISAMAKAN) */
 .content-section {
     position: relative;
     z-index: 10;
     padding: 50px 20px;
-    background-color: #111;
+    background-color: #0d0d0d;
     text-align: center;
 }
