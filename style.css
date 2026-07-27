@@ -7,6 +7,74 @@ body, html {
     overflow-x: hidden;
 }
 
+/* --- FLOATING NAVBAR (DESAIN CARD MELAYANG & LOGO TENGAH) --- */
+.floating-navbar {
+    position: fixed;
+    top: 20px;                     /* Jarak melayang dari atas */
+    left: 50%;
+    transform: translateX(-50%);    /* Presisi tepat di tengah layar */
+    width: 90%;
+    max-width: 1100px;             /* Lebar maksimal navbar */
+    
+    background-color: #ffffff;     /* Latar putih bersih melayang */
+    border-radius: 16px;           /* Sudut membulat */
+    padding: 12px 30px;
+    
+    display: flex;
+    justify-content: space-between;/* Membagi area kiri, tengah, kanan */
+    align-items: center;
+    
+    z-index: 1000;                 /* Selalu berada di atas elemen hero */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Efek bayangan melayang */
+    box-sizing: border-box;
+}
+
+/* Logo Kecil di Tengah Navbar */
+.nav-logo img {
+    height: 38px;                  
+    width: auto;
+    display: block;
+}
+
+/* Menu Navigasi Kiri & Kanan */
+.nav-menu {
+    display: flex;
+    gap: 25px;                     /* Jarak antarmenu */
+    align-items: center;
+}
+
+/* Teks Link Navbar */
+.nav-menu a {
+    color: #111111;                /* Warna teks gelap kontras */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #6c5ce7;                /* Warna aksen saat kursor diarahkan */
+}
+
+/* Responsif untuk Layar HP */
+@media (max-width: 768px) {
+    .floating-navbar {
+        width: 95%;
+        padding: 10px 15px;
+        top: 10px;
+    }
+    .nav-menu {
+        gap: 10px;
+    }
+    .nav-menu a {
+        font-size: 12px;
+    }
+    .nav-logo img {
+        height: 28px;
+    }
+}
+
+/* --- HERO SECTION --- */
 .hero-container {
     position: relative;
     width: 100%;
