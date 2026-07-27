@@ -1,5 +1,6 @@
 // Ambil elemen yang akan dimanipulasi
 const bgImage = document.getElementById('bgImage');
+const logo = document.querySelector('.main-logo');
 
 // Berapa pixel jarak scroll maksimal untuk efek ini selesai
 // (Misal: setelah scroll 600px, gambar akan full blur dan hilang)
@@ -26,8 +27,14 @@ window.addEventListener('scroll', () => {
     const opacityValue = 1 - scrollFraction;
     bgImage.style.opacity = opacityValue;
 
-    // Tambahan: Pastikan logo juga menghilang jika di-scroll terlalu jauh
-    // (Opsional, tapi bagus agar logo tidak diam di tempat)
-    // const logo = document.querySelector('.main-logo');
-    // logo.style.opacity = 0.5 - (scrollFraction * 0.5); // 0.5 -> 0
+    // 3. EFEK KABUR & HILANG UNTUK LOGO (DISESUAIKAN)
+    if (logo) {
+        // Logo ngeblur dari 0px hingga 12px saat di-scroll
+        const logoBlur = scrollFraction * 12; 
+        // Logo memudar dari opacity 1 hingga 0
+        const logoOpacity = 1 - scrollFraction; 
+        
+        logo.style.filter = `blur(${logoBlur}px)`;
+        logo.style.opacity = logoOpacity;
+    }
 });
