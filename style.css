@@ -1,8 +1,8 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Ganti sesuai selera */
-    background-color: #111; /* Warna dasar gelap saat bg hilang */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111;
     color: white;
     overflow-x: hidden;
 }
@@ -10,11 +10,11 @@ body, html {
 .hero-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Pastikan konten tak meluber */
+    overflow: hidden;
 }
 
 .bg-image {
@@ -23,13 +23,11 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('image_0.png'); /* Memanggil gambar background */
+    background-image: url('image_0.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Perbaikan: transform scale & margin minus agar efek blur tidak menyisakan garis putih di tepi layar */
     transform: scale(1.05);
-    /* Kekaburan awal agar tidak mengganggu */
     filter: blur(4px); 
     z-index: 1;
 }
@@ -40,31 +38,29 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Overlay hitam sedikit transparan (0.5) */
     background-color: rgba(0, 0, 0, 0.5); 
     z-index: 2;
 }
 
 .logo-wrapper {
-    z-index: 3; /* Di atas bg dan overlay */
+    z-index: 3; 
     text-align: center;
 }
 
 .main-logo {
-    /* Perubahan: Kita naikkan batas lebarnya agar logo terlihat megah */
-    max-width: 80%; 
-    /* Tetap gunakan persentase agar responsif di HP */
-    width: 90%; 
+    /* --- INI BAGIAN YANG DIUBAH --- */
+    max-width: 700px; /* Ukuran batas maksimal yang megah */
+    width: 90%;       /* Agar logo besar dan responsif */
     height: auto;
-    /* Pastikan opacity tetap 1 agar terang */
-    opacity: 1; 
+    opacity: 1;       /* Memastikan logo terang dan jelas */
+    /* ----------------------------- */
 }
 
 /* Bagian Konten Di Bawah */
 .content-section {
     position: relative;
-    z-index: 10; /* Di atas hero section */
+    z-index: 10;
     padding: 50px 20px;
-    background-color: #111; /* Sama dengan body */
+    background-color: #111;
     text-align: center;
 }
