@@ -7,7 +7,7 @@ body, html {
     overflow-x: hidden;
 }
 
-/* --- FLOATING NAVBAR (SUDAH DISESUAIKAN POSITION-NYA) --- */
+/* --- FLOATING NAVBAR (LOGO KIRI/TENGAH, SEMUA MENU DI KANAN) --- */
 .floating-navbar {
     position: fixed;
     top: 20px;
@@ -21,7 +21,7 @@ body, html {
     padding: 12px 35px;
     
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Mendorong Logo ke kiri/tengah dan Menu ke kanan */
     align-items: center;
     
     z-index: 1000;
@@ -29,33 +29,21 @@ body, html {
     box-sizing: border-box;
 }
 
-/* Membagi area kiri & kanan seimbang biar logo presisi di tengah */
-.nav-menu {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    flex: 1; 
-}
-
-.nav-left {
-    justify-content: flex-start; /* Mepet Kiri */
-}
-
-.nav-right {
-    justify-content: flex-end; /* Mepet Kanan */
-}
-
-.nav-logo {
-    display: flex;
-    justify-content: center;
-}
-
+/* Logo di Kiri */
 .nav-logo img {
     height: 38px;
     width: auto;
     display: block;
 }
 
+/* Semua Menu Berkumpul di Kanan */
+.nav-menu {
+    display: flex;
+    gap: 25px; /* Jarak antar item menu */
+    align-items: center;
+}
+
+/* Teks Link Navbar */
 .nav-menu a {
     color: #111111;
     text-decoration: none;
@@ -79,10 +67,10 @@ body, html {
         gap: 10px;
     }
     .nav-menu a {
-        font-size: 12px;
+        font-size: 11px;
     }
     .nav-logo img {
-        height: 28px;
+        height: 26px;
     }
 }
 
