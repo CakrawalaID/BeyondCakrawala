@@ -51,10 +51,10 @@ body, html {
 }
 
 .main-logo {
-    max-width: 80%; /* Responsif */
+    max-width: 400px; /* Membatasi lebar logo agar tidak terlalu raksasa */
+    width: 80%;       /* Agar tetap responsif di layar HP */
     height: auto;
-    /* Logo dibuat 100% jelas & tajam */
-    opacity: 1; 
+    opacity: 1;       /* Memastikan logo terang & tidak transparan */
 }
 
 /* Bagian Konten Di Bawah */
