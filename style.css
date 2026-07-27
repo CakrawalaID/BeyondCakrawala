@@ -130,3 +130,42 @@ body, html {
     background-color: #242424; /* Dibuat hitam murni padat (#000000) */
     text-align: center;
 }
+
+/* --- ABOUT SECTION --- */
+.about-section {
+    max-width: 900px;
+    margin: 40px auto 60px auto;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.about-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.title-icon {
+    color: #6c5ce7;
+    font-size: 24px;
+}
+
+.about-card {
+    position: relative;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 30px 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-left: 4px solid #6c5ce7;
+}
+
+.about-card p {
+    color: #d1d1d1;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0;
+}
