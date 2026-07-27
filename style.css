@@ -53,8 +53,8 @@ body, html {
 .main-logo {
     max-width: 80%; /* Responsif */
     height: auto;
-    /* Logo transparan 50% di awal */
-    opacity: 0.5; 
+    /* Logo dibuat 100% jelas & tajam */
+    opacity: 1; 
 }
 
 /* Bagian Konten Di Bawah */
