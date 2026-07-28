@@ -126,14 +126,15 @@ body, html {
 .content-section {
     position: relative;
     z-index: 10;
-    padding: 30px 20px; /* Padding dipangkas dari 50px ke 30px supaya tidak banyak space kosong */
+    padding: 100px 20px 30px 20px; /* Padding atas disesuaikan agar konten pas berada di bawah navbar tanpa spasi kosong berlebih */
     background-color: #2d2d2d; 
     
     /* SETTING PATTERN ORNAMEN SUPAYA RAPAT DAN PAS DI DESKTOP */
     background-image: url('pattern.png');
-    background-repeat: repeat;
-    background-size: 1200px auto; /* Ukuran diperbesar signifikan agar 1 pattern memenuhi proporsi desktop */
-    background-position: center top;
+    background-repeat: no-repeat;       /* Matikan repeat agar tidak ada space patah/sambungan */
+    background-size: cover;             /* Memaksa satu gambar penuh menutup seluruh area desktop */
+    background-position: center center;  /* Center tepat di tengah */
+    background-attachment: fixed;       /* Membuat background terkunci rapi saat di-scroll */
     
     text-align: center;
 }
