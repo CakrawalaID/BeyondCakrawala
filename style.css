@@ -122,17 +122,18 @@ body, html {
     opacity: 1; 
 }
 
-/* Bagian Konten Di Bawah */
+/* Bagian Konten Di Bawah (Disesuaikan agar tidak berjarak luas & ukurannya menyatu) */
 .content-section {
     position: relative;
     z-index: 10;
-    padding: 50px 20px;
+    padding: 30px 20px; /* Padding dipangkas dari 50px ke 30px supaya tidak banyak space kosong */
     background-color: #2d2d2d; 
     
-    /* PATTERN ORNAMEN PENJELAJAH */
-    background-image: url('pattern.png');
+    /* SETTING PATTERN ORNAMEN SUPAYA RAPAT DAN PAS DI DESKTOP */
+    background-image: url('pattern-explorer.png');
     background-repeat: repeat;
-    background-size: 300px;
+    background-size: 550px auto; /* Diperbesar ke 550px agar proporsional di desktop & tidak patah-patah */
+    background-position: center top;
     
     text-align: center;
 }
@@ -140,7 +141,7 @@ body, html {
 /* --- ABOUT SECTION --- */
 .about-section {
     max-width: 900px;
-    margin: 40px auto 60px auto;
+    margin: 20px auto 30px auto; /* Margin atas-bawah dikurangi agar hemat space */
     text-align: left;
     padding: 0 20px;
 }
