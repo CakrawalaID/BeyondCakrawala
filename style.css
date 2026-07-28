@@ -130,7 +130,7 @@ body, html {
     background-color: #2d2d2d; 
     
     /* SETTING PATTERN ORNAMEN SUPAYA RAPAT DAN PAS DI DESKTOP */
-    background-image: url('pattern-explorer.png');
+    background-image: url('pattern.png');
     background-repeat: repeat;
     background-size: 550px auto; /* Diperbesar ke 550px agar proporsional di desktop & tidak patah-patah */
     background-position: center top;
