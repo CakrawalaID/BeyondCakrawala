@@ -132,7 +132,7 @@ body, html {
     /* SETTING PATTERN ORNAMEN SUPAYA RAPAT DAN PAS DI DESKTOP */
     background-image: url('pattern.png');
     background-repeat: repeat;
-    background-size: 550px auto; /* Diperbesar ke 550px agar proporsional di desktop & tidak patah-patah */
+    background-size: 1200px auto; /* Ukuran diperbesar signifikan agar 1 pattern memenuhi proporsi desktop */
     background-position: center top;
     
     text-align: center;
