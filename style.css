@@ -141,7 +141,7 @@ body, html {
 /* --- ABOUT SECTION --- */
 .about-section {
     max-width: 900px;
-    margin: 20px auto 30px auto; /* Margin atas-bawah dikurangi agar hemat space */
+    margin: 20px auto 100px auto; /* Margin bawah dinaikkan jadi 100px agar ada space yang ideal */
     text-align: left;
     padding: 0 20px;
 }
@@ -180,7 +180,7 @@ body, html {
 /* --- MEDIA SECTION --- */
 .media-section {
     max-width: 900px;
-    margin: 40px auto 50px auto;
+    margin: 0 auto 100px auto; /* Diberikan margin bawah yang seimbang */
     text-align: left;
     padding: 0 20px;
 }
