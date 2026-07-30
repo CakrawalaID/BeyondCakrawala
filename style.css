@@ -91,24 +91,22 @@ body, html {
     left: -10px;
     width: calc(100% + 20px);
     height: calc(100% + 20px);
-    background-image: url('image_0.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    
+    /* MODIFIKASI: Menggunakan multiple background. 
+       Gradasi gelap ditumpuk di atas pattern agar pattern tetap muncul di bagian buram. */
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 40%, #2d2d2d 100%),
+        url('pattern.png');
+    background-size: cover, cover; /* Menyesuaikan ukuran kedua background */
+    background-position: center, center top;
+    background-repeat: no-repeat, no-repeat;
+    
     transform: scale(1.15); /* Ditingkatkan agar pinggiran gelap terpotong rapi */
-    filter: blur(8px); 
+    filter: blur(6px); /* Sedikit kurangi blur agar pattern kecil masih terbaca samar */
     z-index: 1;
 }
 
-.bg-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 60%, #2d2d2d 100%); 
-    z-index: 2;
-}
+/* bg-overlay dihapus karena gradasi sudah menyatu di .bg-image */
 
 .logo-wrapper {
     z-index: 3; 
@@ -122,19 +120,20 @@ body, html {
     opacity: 1; 
 }
 
-/* Bagian Konten Di Bawah (Disesuaikan agar tidak berjarak luas & ukurannya menyatu) */
+/* Bagian Konten Di Bawah */
 .content-section {
     position: relative;
     z-index: 10;
-    padding: 100px 20px 30px 20px; /* Padding atas disesuaikan agar konten pas berada di bawah navbar tanpa spasi kosong berlebih */
-    background-color: #2d2d2d; 
+    padding: 30px 20px; /* Padding dipangkas supaya tidak banyak space kosong */
     
-    /* SETTING PATTERN ORNAMEN SUPAYA RAPAT DAN PAS DI DESKTOP */
-    background-image: url('pattern.png');
-    background-repeat: no-repeat;       /* Matikan repeat agar tidak ada space patah/sambungan */
-    background-size: cover;             /* Memaksa satu gambar penuh menutup seluruh area desktop */
-    background-position: center center;  /* Center tepat di tengah */
-    background-attachment: fixed;       /* Membuat background terkunci rapi saat di-scroll */
+    /* MODIFIKASI: Gunakan background warna gelap yang sama, 
+       tanpa gradasi, tapi dengan pattern yang jauh lebih gelap. */
+    background-color: #1a1a1a; /* Background lebih gelap agar kontras dengan bagian buram */
+    background-image: 
+        url('pattern_dark.png'); /* Buat versi pattern yang jauh lebih gelap/kusam */
+    background-repeat: repeat;
+    background-size: 550px auto; 
+    background-position: center top;
     
     text-align: center;
 }
@@ -164,7 +163,7 @@ body, html {
 
 .about-card {
     position: relative;
-    background-color: #1a1a1a;
+    background-color: #111111; /* Card sedikit lebih gelap lagi untuk efek kedalaman */
     border-radius: 12px;
     padding: 30px 35px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
