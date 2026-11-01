@@ -243,7 +243,7 @@ body, html {
     color: #a0a0a0;
 }
 
-/* Warna Hover & State per Platform Media */
+/* Warna Hover per Platform Media */
 .media-card.yt:hover { border-left-color: #ff0000; }
 .media-card.yt:hover .media-icon { background-color: #ff0000; color: #fff; }
 
@@ -256,24 +256,26 @@ body, html {
 .media-card.x-twitter:hover { border-left-color: #ffffff; }
 .media-card.x-twitter:hover .media-icon { background-color: #ffffff; color: #000; }
 
-/* Styling Khusus Discord (Warna khas & interaktif saat di-hover/ditekan) */
+/* --- Styling Kartu Media Discord (Polos Default, Berwarna & Bayangan Hitam saat di-hover/aktif) --- */
 .media-card.discord {
-    border-left: 4px solid #5865F2;
+    border-left: 4px solid #597578;
 }
 
 .media-card.discord .media-icon {
-    background-color: #5865F2;
+    background-color: #262626;
     color: #ffffff;
 }
 
 .media-card.discord:hover,
 .media-card.discord:active {
-    border-left-color: #4752C4;
-    box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+    border-left-color: #5865F2; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8); /* Bayangan hitam tebal */
 }
 
-.media-card.discord:hover .media-icon {
-    background-color: #4752C4;
+.media-card.discord:hover .media-icon,
+.media-card.discord:active .media-icon {
+    background-color: #5865F2; 
+    color: #ffffff;
 }
 
 /* Responsif Media Grid di Layar HP */
