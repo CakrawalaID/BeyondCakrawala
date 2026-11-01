@@ -2,7 +2,6 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Ubah ke #2d2d2d agar seragam di seluruh bagian */
     background-color: #2d2d2d; 
     color: white;
     overflow-x: hidden;
@@ -95,7 +94,7 @@ body, html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transform: scale(1.15); /* Ditingkatkan agar pinggiran gelap terpotong rapi */
+    transform: scale(1.15);
     filter: blur(8px); 
     z-index: 1;
 }
@@ -122,36 +121,35 @@ body, html {
     opacity: 1; 
 }
 
-/* Bagian Konten Di Bawah (Disesuaikan agar tidak berjarak luas & ukurannya menyatu) */
+/* Bagian Konten Di Bawah */
 .content-section {
     position: relative;
     z-index: 10;
-    padding: 30px 20px; /* Padding dipangkas dari 50px ke 30px supaya tidak banyak space kosong */
+    padding: 30px 20px;
     background-color: #2d2d2d; 
-    
-    /* 1 GAMBAR PATTERN MEMENUHI SELURUH LAYAR TANPA SPASI/ULANG */
     background-image: url('pattern.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%; /* Memaksa 1 gambar langsung pas & penuh se-layar */
+    background-size: 100% 100%;
     background-position: center center;
-    
     text-align: center;
 }
 
 /* --- ABOUT SECTION --- */
 .about-section {
     max-width: 900px;
-    margin: 20px auto 100px auto; /* Margin bawah dinaikkan jadi 100px agar ada space yang ideal */
+    margin: 20px auto 100px auto;
     text-align: left;
     padding: 0 20px;
 }
 
+/* Judul diletakkan di tengah */
 .about-title {
     font-size: 32px;
     font-weight: 700;
     color: #ffffff;
     display: flex;
     align-items: center;
+    justify-content: center; /* Diposisikan ke tengah */
     gap: 12px;
     margin-bottom: 25px;
 }
@@ -176,21 +174,26 @@ body, html {
     line-height: 1.8;
     margin: 0;
 }
+.about-card p + p {
+    margin-top: 15px;
+}
 
 /* --- MEDIA SECTION --- */
 .media-section {
     max-width: 900px;
-    margin: 0 auto 100px auto; /* Diberikan margin bawah yang seimbang */
+    margin: 0 auto 100px auto;
     text-align: left;
     padding: 0 20px;
 }
 
+/* Judul diletakkan di tengah */
 .media-title {
     font-size: 32px;
     font-weight: 700;
     color: #ffffff;
     display: flex;
     align-items: center;
+    justify-content: center; /* Diposisikan ke tengah */
     gap: 12px;
     margin-bottom: 25px;
 }
@@ -256,7 +259,7 @@ body, html {
 .media-card.x-twitter:hover { border-left-color: #ffffff; }
 .media-card.x-twitter:hover .media-icon { background-color: #ffffff; color: #000; }
 
-/* --- Styling Kartu Media Discord (Polos Default, Berwarna & Bayangan Hitam saat di-hover/aktif) --- */
+/* --- Styling Kartu Media Discord --- */
 .media-card.discord {
     border-left: 4px solid #597578;
 }
@@ -269,7 +272,7 @@ body, html {
 .media-card.discord:hover,
 .media-card.discord:active {
     border-left-color: #5865F2; 
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8); /* Bayangan hitam tebal */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
 }
 
 .media-card.discord:hover .media-icon,
@@ -278,20 +281,22 @@ body, html {
     color: #ffffff;
 }
 
-/* --- PROJECT SECTION --- */
+/* --- PROJECT SECTION (Gaya Tombol Gambar Tengah) --- */
 .project-section {
     max-width: 900px;
     margin: 0 auto 100px auto;
-    text-align: left;
+    text-align: center; /* Posisikan ke tengah */
     padding: 0 20px;
 }
 
+/* Judul diletakkan di tengah */
 .project-title {
     font-size: 32px;
     font-weight: 700;
     color: #ffffff;
     display: flex;
     align-items: center;
+    justify-content: center; /* Diposisikan ke tengah */
     gap: 12px;
     margin-bottom: 25px;
 }
@@ -302,60 +307,45 @@ body, html {
 }
 
 .project-card {
-    background-color: #1a1a1a;
-    border-radius: 12px;
-    padding: 20px 25px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    display: inline-block;
     text-decoration: none;
     color: #ffffff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border-left: 4px solid #597578;
-    width: 100%;
-    max-width: 600px;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    background: transparent;
+    transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
-    border-left-color: #6c5ce7;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05); /* Efek membesar halus saat disentuh */
 }
 
 .project-img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 10px;
-    background-color: #262626;
+    width: 180px; /* Ukuran gambar tombol project */
+    height: 180px;
+    object-fit: contain;
+    border-radius: 16px;
+    display: block;
+    margin: 0 auto 12px auto;
+    transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-info h3 {
-    margin: 0 0 6px 0;
-    font-size: 20px;
-    font-weight: 600;
+.project-card:hover .project-img {
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8)); /* Bayangan hitam saat di-hover */
 }
 
-.project-info p {
+.project-card h3 {
     margin: 0;
-    font-size: 14px;
-    color: #a0a0a0;
-    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
 }
 
-/* Responsif Media Grid & Project di Layar HP */
+/* Responsif Media Grid di Layar HP */
 @media (max-width: 600px) {
     .media-grid {
         grid-template-columns: 1fr;
     }
-    .project-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
     .project-img {
-        width: 100px;
-        height: 100px;
+        width: 140px;
+        height: 140px;
     }
 }
