@@ -278,9 +278,84 @@ body, html {
     color: #ffffff;
 }
 
-/* Responsif Media Grid di Layar HP */
+/* --- PROJECT SECTION --- */
+.project-section {
+    max-width: 900px;
+    margin: 0 auto 100px auto;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.project-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-left: 4px solid #597578;
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-left-color: #6c5ce7;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+}
+
+.project-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: #262626;
+}
+
+.project-info h3 {
+    margin: 0 0 6px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.project-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #a0a0a0;
+    line-height: 1.5;
+}
+
+/* Responsif Media Grid & Project di Layar HP */
 @media (max-width: 600px) {
     .media-grid {
         grid-template-columns: 1fr;
+    }
+    .project-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .project-img {
+        width: 100px;
+        height: 100px;
     }
 }
