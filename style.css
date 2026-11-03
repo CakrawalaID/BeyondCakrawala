@@ -295,7 +295,7 @@ body, html {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    margin-bottom: 10px; /* Jarak diperkecil agar logo naik mendekati judul */
+    margin-bottom: 25px;
 }
 
 .project-container {
