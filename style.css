@@ -142,14 +142,13 @@ body, html {
     padding: 0 20px;
 }
 
-/* Judul diletakkan di tengah */
 .about-title {
     font-size: 32px;
     font-weight: 700;
     color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: center; /* Diposisikan ke tengah */
+    justify-content: center;
     gap: 12px;
     margin-bottom: 25px;
 }
@@ -186,14 +185,13 @@ body, html {
     padding: 0 20px;
 }
 
-/* Judul diletakkan di tengah */
 .media-title {
     font-size: 32px;
     font-weight: 700;
     color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: center; /* Diposisikan ke tengah */
+    justify-content: center;
     gap: 12px;
     margin-bottom: 25px;
 }
@@ -259,7 +257,7 @@ body, html {
 .media-card.x-twitter:hover { border-left-color: #ffffff; }
 .media-card.x-twitter:hover .media-icon { background-color: #ffffff; color: #000; }
 
-/* --- Styling Kartu Media Discord --- */
+/* Styling Kartu Media Discord */
 .media-card.discord {
     border-left: 4px solid #597578;
 }
@@ -281,22 +279,21 @@ body, html {
     color: #ffffff;
 }
 
-/* --- PROJECT SECTION (Gaya Tombol Gambar Tengah) --- */
+/* --- PROJECT SECTION --- */
 .project-section {
     max-width: 900px;
     margin: 0 auto 100px auto;
-    text-align: center; /* Posisikan ke tengah */
+    text-align: center;
     padding: 0 20px;
 }
 
-/* Judul diletakkan di tengah */
 .project-title {
     font-size: 32px;
     font-weight: 700;
     color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: center; /* Diposisikan ke tengah */
+    justify-content: center;
     gap: 12px;
     margin-bottom: 25px;
 }
@@ -309,43 +306,34 @@ body, html {
 .project-card {
     display: inline-block;
     text-decoration: none;
-    color: #ffffff;
     background: transparent;
     transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-    transform: scale(1.05); /* Efek membesar halus saat disentuh */
+    transform: scale(1.05);
 }
 
 .project-img {
-    width: 180px; /* Ukuran gambar tombol project */
-    height: 180px;
+    width: 280px;
+    height: auto;
     object-fit: contain;
-    border-radius: 16px;
+    border-radius: 12px;
     display: block;
-    margin: 0 auto 12px auto;
+    margin: 0 auto;
     transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover .project-img {
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8)); /* Bayangan hitam saat di-hover */
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.9));
 }
 
-.project-card h3 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffffff;
-}
-
-/* Responsif Media Grid di Layar HP */
+/* Responsif Media Grid & Project di Layar HP */
 @media (max-width: 600px) {
     .media-grid {
         grid-template-columns: 1fr;
     }
     .project-img {
-        width: 140px;
-        height: 140px;
+        width: 200px;
     }
 }
