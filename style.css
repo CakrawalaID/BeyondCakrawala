@@ -7,7 +7,7 @@ body, html {
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #2d2d2d; 
-    color: #1a1a1a;
+    color: white;
     overflow-x: hidden;
 }
 
@@ -19,12 +19,15 @@ body, html {
     transform: translateX(-50%);
     width: 90%;
     max-width: 1100px;
+    
     background-color: #ffffff;
     border-radius: 16px;
     padding: 12px 35px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     z-index: 1000;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
@@ -53,6 +56,24 @@ body, html {
 
 .nav-menu a:hover {
     color: #6c5ce7;
+}
+
+/* Responsif Layar HP */
+@media (max-width: 768px) {
+    .floating-navbar {
+        width: 95%;
+        padding: 10px 15px;
+        top: 10px;
+    }
+    .nav-menu {
+        gap: 10px;
+    }
+    .nav-menu a {
+        font-size: 11px;
+    }
+    .nav-logo img {
+        height: 26px;
+    }
 }
 
 /* --- HERO SECTION --- */
@@ -101,53 +122,35 @@ body, html {
     max-width: 800px; 
     width: 90%; 
     height: auto; 
+    opacity: 1; 
 }
 
-/* --- EFEK LEMBARAN KERTAS BERTUMPUK FULL WIDTH --- */
-.paper-section {
+/* Bagian Konten Di Bawah */
+.content-section {
     position: relative;
-    width: 100%;
-    background-color: #f4f3ef; /* Warna kertas putih kekuningan natural */
-    background-image: url('paper_bg.png'); /* Tekstur serat kertas opsional */
-    background-size: cover;
-    padding-bottom: 80px;
-    scroll-margin-top: 100px;
-}
-
-/* Sobekan kertas di bagian atas setiap section */
-.paper-tear {
-    width: 100%;
-    height: 60px;
-    background-image: url('paper_bg.png'); /* Gambar png sobekan kertas transparan */
-    background-size: 100% 100%;
+    z-index: 10;
+    padding: 30px 20px;
+    background-color: #2d2d2d; 
+    background-image: url('pattern.png');
     background-repeat: no-repeat;
-    position: absolute;
-    top: -50px;
-    left: 0;
-    z-index: 5;
-    filter: drop-shadow(0 -4px 6px rgba(0, 0, 0, 0.15));
+    background-size: 100% 100%;
+    background-position: center center;
+    text-align: center;
 }
 
-/* Penumpukan Layer Z-Index agar section bawah menindih section atas */
-.section-about { z-index: 10; margin-top: -30px; }
-.section-media { z-index: 20; margin-top: -40px; }
-.section-project { z-index: 30; margin-top: -40px; }
-.section-footer { z-index: 40; margin-top: -40px; padding-bottom: 40px; }
-
-/* Wadah Konten di Dalam Kertas */
-.section-content {
+/* --- ABOUT SECTION --- */
+.about-section {
     max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px 0 20px;
-    position: relative;
-    z-index: 6;
+    margin: 20px auto 100px auto;
+    text-align: left;
+    padding: 0 20px;
+    scroll-margin-top: 120px;
 }
 
-/* --- TITLE STYLES --- */
-.about-title, .media-title, .project-title {
+.about-title {
     font-size: 32px;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,17 +163,17 @@ body, html {
     font-size: 24px;
 }
 
-/* --- ABOUT SECTION --- */
 .about-card {
-    background-color: #ffffff;
+    position: relative;
+    background-color: #1a1a1a;
     border-radius: 12px;
     padding: 30px 35px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border-left: 4px solid #597578; 
 }
 
 .about-card p {
-    color: #333333;
+    color: #d1d1d1;
     font-size: 16px;
     line-height: 1.8;
     margin: 0;
@@ -180,6 +183,25 @@ body, html {
 }
 
 /* --- MEDIA SECTION --- */
+.media-section {
+    max-width: 900px;
+    margin: 0 auto 100px auto;
+    text-align: left;
+    padding: 0 20px;
+    scroll-margin-top: 120px;
+}
+
+.media-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
 .media-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -187,22 +209,22 @@ body, html {
 }
 
 .media-card {
-    background-color: #ffffff;
+    background-color: #1a1a1a;
     border-radius: 12px;
     padding: 20px 25px;
     display: flex;
     align-items: center;
     gap: 18px;
     text-decoration: none;
-    color: #1a1a1a;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border-left: 4px solid #597578;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .media-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
 }
 
 .media-icon {
@@ -211,24 +233,78 @@ body, html {
     justify-content: center;
     width: 48px;
     height: 48px;
-    background-color: #f0f0f0;
+    background-color: #262626;
     border-radius: 10px;
-    color: #111;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.media-info h3 { margin: 0 0 4px 0; font-size: 18px; font-weight: 600; }
-.media-info p { margin: 0; font-size: 13px; color: #666; }
+.media-info h3 {
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
 
+.media-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #a0a0a0;
+}
+
+/* Warna Hover per Platform Media */
 .media-card.yt:hover { border-left-color: #ff0000; }
 .media-card.yt:hover .media-icon { background-color: #ff0000; color: #fff; }
+
 .media-card.tt:hover { border-left-color: #25f4ee; }
 .media-card.tt:hover .media-icon { background-color: #25f4ee; color: #000; }
-.media-card.discord:hover { border-left-color: #5865F2; }
-.media-card.discord:hover .media-icon { background-color: #5865F2; color: #fff; }
-.media-card.x-twitter:hover { border-left-color: #111; }
-.media-card.x-twitter:hover .media-icon { background-color: #111; color: #fff; }
+
+.media-card.ig:hover { border-left-color: #e1306c; }
+.media-card.ig:hover .media-icon { background-color: #e1306c; color: #fff; }
+
+.media-card.x-twitter:hover { border-left-color: #ffffff; }
+.media-card.x-twitter:hover .media-icon { background-color: #ffffff; color: #000; }
+
+/* Styling Kartu Media Discord */
+.media-card.discord {
+    border-left: 4px solid #597578;
+}
+
+.media-card.discord .media-icon {
+    background-color: #262626;
+    color: #ffffff;
+}
+
+.media-card.discord:hover,
+.media-card.discord:active {
+    border-left-color: #5865F2; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+}
+
+.media-card.discord:hover .media-icon,
+.media-card.discord:active .media-icon {
+    background-color: #5865F2; 
+    color: #ffffff;
+}
 
 /* --- PROJECT SECTION --- */
+.project-section {
+    max-width: 900px;
+    margin: 0 auto 80px auto;
+    text-align: center;
+    padding: 0 20px;
+    scroll-margin-top: 120px;
+}
+
+.project-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
 .project-container {
     display: flex;
     justify-content: center;
@@ -236,6 +312,8 @@ body, html {
 
 .project-card {
     display: inline-block;
+    text-decoration: none;
+    background: transparent;
     transition: transform 0.3s ease;
 }
 
@@ -246,27 +324,78 @@ body, html {
 .project-img {
     width: 280px;
     height: auto;
+    object-fit: contain;
+    border-radius: 12px;
     display: block;
     margin: 0 auto;
+    transition: filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover .project-img {
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.9));
 }
 
 /* --- FOOTER SECTION --- */
-.text-center { text-align: center; }
+.footer-section {
+    background-color: #000000;
+    padding: 40px 20px;
+    text-align: center;
+    color: #b0b0b0;
+    font-size: 14px;
+    position: relative;
+    z-index: 20;
+}
 
-.copyright-text { margin: 0 0 6px 0; font-weight: 600; }
-.creator-text { margin: 0 0 18px 0; font-size: 13px; color: #666; }
-.footer-divider { width: 60px; height: 1px; background-color: #ccc; margin: 0 auto 18px auto; }
-.live-clock { margin: 0 0 6px 0; font-weight: 600; }
-.made-with-text { margin: 0; font-size: 13px; color: #666; }
-.heart-icon { color: #ff4757; }
+.copyright-text {
+    margin: 0 0 6px 0;
+    font-weight: 400;
+}
 
-/* Responsif HP */
-@media (max-width: 768px) {
-    .floating-navbar { width: 95%; padding: 10px 15px; top: 10px; }
-    .nav-menu { gap: 10px; }
-    .nav-menu a { font-size: 11px; }
-    .nav-logo img { height: 26px; }
-    .media-grid { grid-template-columns: 1fr; }
-    .project-img { width: 200px; }
-    .paper-tear { height: 40px; top: -35px; }
+.creator-text {
+    margin: 0 0 18px 0;
+    font-size: 13px;
+    color: #808080;
+}
+
+.footer-divider {
+    width: 60px;
+    height: 1px;
+    background-color: #333333;
+    margin: 0 auto 18px auto;
+}
+
+.live-clock {
+    margin: 0 0 6px 0;
+    font-weight: 500;
+    color: #d1d1d1;
+}
+
+.made-with-text {
+    margin: 0;
+    font-size: 13px;
+    color: #999999;
+}
+
+.heart-icon {
+    color: #ff4757;
+    display: inline-block;
+}
+
+/* Responsif Media Grid & Project di Layar HP */
+@media (max-width: 600px) {
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-img {
+        width: 200px;
+    }
+    .about-section,
+    .media-section,
+    .project-section {
+        scroll-margin-top: 85px;
+    }
+    .footer-section {
+        font-size: 12px;
+        padding: 30px 15px;
+    }
 }
