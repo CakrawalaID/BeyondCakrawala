@@ -10,12 +10,9 @@
 
     <!-- Navbar Melayang (Floating Navbar) -->
     <nav class="floating-navbar">
-        <!-- Logo di Sisi Kiri -->
         <div class="nav-logo">
             <img src="image_2.png" alt="CakrawalaID Logo">
         </div>
-
-        <!-- Semua Menu Kumpul di Sisi Kanan -->
         <div class="nav-menu">
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -27,24 +24,19 @@
 
     <!-- Area Hero / Tampilan Awal Full Screen -->
     <div class="hero-container" id="home">
-        <!-- Background Image -->
         <div class="bg-image" id="bgImage"></div>
-        <!-- Overlay Hitam Transparan -->
         <div class="bg-overlay"></div>
-        
-        <!-- Logo di Tengah -->
         <div class="logo-wrapper">
             <img src="image_1.png" alt="CakrawalaID Logo" class="main-logo">
         </div>
     </div>
 
-    <!-- Area Konten (Di bawah Hero, untuk bisa di-scroll) -->
+    <!-- Area Konten Di Bawah (Bertumpuk ala Kertas Sobek) -->
     <div class="content-section">
         
         <!-- Section About -->
-        <section id="about" class="about-section">
+        <section id="about" class="about-section paper-sheet">
             <h2 class="about-title"><span class="title-icon">•</span> About</h2>
-            
             <div class="about-card">
                 <p>
                     <strong>CakrawalaID</strong> itu wadah studio kreatif yang fokus banget sama dunia <em>roleplay</em> seru dan <em>minigames</em> asyik. Di sini, kita ngeracik cerita yang kuat, dunia virtual yang hidup, dan pengalaman main yang gak ngebosenin.
@@ -56,9 +48,8 @@
         </section>
 
         <!-- Section Media -->
-        <section id="media" class="media-section">
+        <section id="media" class="media-section paper-sheet">
             <h2 class="media-title"><span class="title-icon">•</span> Media</h2>
-
             <div class="media-grid">
                 <!-- YouTube -->
                 <a href="https://www.youtube.com/@CakrawalaOfficialCH" target="_blank" class="media-card yt">
@@ -70,7 +61,6 @@
                         <p>Nonton konten eksklusif & video terbaru</p>
                     </div>
                 </a>
-
                 <!-- TikTok -->
                 <a href="https://www.tiktok.com/@cakraofficialid" target="_blank" class="media-card tt">
                     <div class="media-icon">
@@ -81,7 +71,6 @@
                         <p>Highlight seru & cuplikan singkat</p>
                     </div>
                 </a>
-
                 <!-- Discord -->
                 <a href="https://discord.gg/yourinvitecode" target="_blank" class="media-card discord">
                     <div class="media-icon">
@@ -92,10 +81,9 @@
                         <p>Gabung komunitas & ngobrol bareng</p>
                     </div>
                 </a>
-
                 <!-- X (Twitter) -->
                 <a href="https://x.com/CakraOfficialID" target="_blank" class="media-card x-twitter">
-                    <div class="media-icon">
+                    <div class="media-icon"> lembar
                         <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                     </div>
                     <div class="media-info">
@@ -107,27 +95,25 @@
         </section>
 
         <!-- Section Project -->
-        <section id="project" class="project-section">
+        <section id="project" class="project-section paper-sheet">
             <h2 class="project-title"><span class="title-icon">•</span> Project</h2>
-
             <div class="project-container">
-                <!-- Tombol Logo Project -->
-                <a href="CITC.html" class="project-card">
-                    <img src="LogoCITC.png" alt="CakrawalaID Project" class="project-img">
+                <a href="halaman-project.html" class="project-card">
+                    <img src="logoCITC.png" alt="CakrawalaID Project" class="project-img">
                 </a>
             </div>
         </section>
 
-    </div>
+        <!-- Footer Section (Juga menggunakan gaya kertas sobek bertumpuk) -->
+        <footer class="footer-section paper-sheet">
+            <p class="copyright-text">&copy; 2026 CakrawalaID Studio — Komunitas Roleplay & Minigames Indonesia. All rights reserved.</p>
+            <p class="creator-text">Created by CakrawalaID</p>
+            <div class="footer-divider"></div>
+            <p class="live-clock" id="liveClock">Memuat waktu...</p>
+            <p class="made-with-text">Made with <span class="heart-icon">❤️</span> for Cakrawala Community</p>
+        </footer>
 
-    <!-- Footer Section -->
-    <footer class="footer-section">
-        <p class="copyright-text">&copy; 2026 CakrawalaID Studio — Komunitas Roleplay & Minigames Indonesia. All rights reserved.</p>
-        <p class="creator-text">Created by CakrawalaID</p>
-        <div class="footer-divider"></div>
-        <p class="live-clock" id="liveClock">Memuat waktu...</p>
-        <p class="made-with-text">Made with <span class="heart-icon">❤️</span> for Cakrawala Community</p>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
