@@ -36,5 +36,41 @@ window.addEventListener('scroll', () => {
         
         logo.style.filter = `blur(${logoBlur}px)`;
         logo.style.opacity = logoOpacity;
+
+// Function untuk memperbarui jam secara real-time setiap detik
+function updateClock() {
+    const now = new Date();
+    
+    // Nama hari dan bulan dalam bahasa Indonesia
+    const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+    const months = [
+        'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 
+        'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+    ];
+
+    const dayName = days[now.getDay()];
+    const dateNum = now.getDate();
+    const monthName = months[now.getMonth()];
+    const year = now.getFullYear();
+
+    // Format jam, menit, dan detik (selalu 2 digit)
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+
+    // Format tampilan waktu
+    const clockString = `${dayName}, ${dateNum} ${monthName} ${year} pukul ${hours}.${minutes}.${seconds} WIB`;
+
+    const clockElement = document.getElementById('liveClock');
+    if (clockElement) {
+        clockElement.textContent = clockString;
+    }
+}
+
+// Jalankan fungsi setiap 1 detik
+setInterval(updateClock, 1000);
+
+// Panggil sekali langsung saat halaman dibuka agar tidak ada jeda
+updateClock();
     }
 });
