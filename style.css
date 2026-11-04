@@ -108,7 +108,7 @@ body, html {
     position: relative;
     width: 100%;
     background-color: #f4f3ef; /* Warna kertas putih kekuningan natural */
-    background-image: url('paper_texture.png'); /* Tekstur serat kertas opsional */
+    background-image: url('paper_bg.png'); /* Tekstur serat kertas opsional */
     background-size: cover;
     padding-bottom: 80px;
     scroll-margin-top: 100px;
