@@ -391,11 +391,4 @@ body, html {
     }
     .about-section,
     .media-section,
-    .project-section {
-        scroll-margin-top: 85px;
-    }
-    .footer-section {
-        font-size: 12px;
-        padding: 30px 15px;
-    }
-}
+    .project-
